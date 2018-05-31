@@ -10,7 +10,7 @@ main(int argc, char *argv[])
 	}
 
 	char *states[] = {
-		"California", "regon",
+		"California", "Oregon",
 		"Washington", "texas"
 	};
 
