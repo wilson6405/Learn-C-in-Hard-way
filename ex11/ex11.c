@@ -16,16 +16,20 @@ main(int argc, char *argv[])
 
 	int num_states = 4;
 	i = 0;
-	while(i < argc) {
+
+	int count = 0;
+	if (num_states > argc) 
+		count = argc;
+	else
+		count = num_states;
+
+	while(i < count) {
 		states[i] = argv[i];
-		//printf("state %d: %s\n", i, states[i]);
+		printf("state %d: %s\n", i, states[i]);
 		i++;
 	}
 
-	while (i < num_states) {
-        printf("state %d: %s\n", i, states[i]);
-        i++;
-    }
-
+	printf("%p\n", *states);
+	printf("%p\n", argv[0]);
 	return 0;
 }
