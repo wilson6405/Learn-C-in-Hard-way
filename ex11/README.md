@@ -207,4 +207,4 @@ state 0: ./ex11
 0x7ffc5ed0c064
 ```
 
-*states指向argv[0]，並不是複製字串過去而是重新指到新的位址
+states[i]重新指向argv[i]，並不是複製字串過去

@@ -4,9 +4,10 @@ int
 main(int argc, char *argv[])
 {
 	int i = 0;
-	while(i < argc){
+	while(argc){
 		printf("arg %d: %s\n", i, argv[i]);
 		i++;
+		if(i >= argc) break;
 	}
 
 	char *states[] = {
@@ -29,7 +30,8 @@ main(int argc, char *argv[])
 		i++;
 	}
 
-	printf("%p\n", *states);
+	printf("%p\n", states[1]);
+	printf("%d\n", *states[1]);
 	printf("%p\n", argv[0]);
 	return 0;
 }
